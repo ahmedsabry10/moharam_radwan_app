@@ -6,8 +6,28 @@ import 'package:moharam_radwan/presentation/widget/animated_logo.dart';
 import 'package:moharam_radwan/presentation/widget/services_item.dart';
 
 import '../../../config/shared/fixed_grid.dart';
+import '../services_screens/digital_marketing.dart';
+import '../services_screens/engine_optmization.dart';
+import '../services_screens/graphic_design.dart';
+import '../services_screens/media_production.dart';
+import '../services_screens/mobile_app.dart';
+import '../services_screens/online_store.dart';
+import '../services_screens/web_page.dart';
 
 class OurServices extends StatelessWidget {
+
+
+  List<Widget> screens=[
+    MobileApplication(),
+    WebPage(),
+    EngineOptimization(),
+    OnlineStorePage(),
+    DigitalMarketing(),
+    GraphicDesign(),
+    MediaProduction(),
+
+  ];
+
   OurServices({super.key});
   ServicesController servicesController=Get.put(ServicesController());
   @override
@@ -39,7 +59,7 @@ class OurServices extends StatelessWidget {
                     index: index,
                     title: servicesController.names[index],
                     icons: servicesController.icons[index],
-                    //screens: screens
+                    screens: servicesController.screensServices[index],
                   );
                 },
                 itemCount:servicesController.icons.length,

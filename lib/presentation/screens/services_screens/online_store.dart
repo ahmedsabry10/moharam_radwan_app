@@ -13,8 +13,8 @@ import '../../widget/carousel_item.dart';
 import '../../widget/opinion_widget.dart';
 import '../../widget/services_widget/distinguishes_widget.dart';
 
-class WebPage extends StatelessWidget {
-  WebPage({super.key});
+class OnlineStorePage extends StatelessWidget {
+  OnlineStorePage({super.key});
 
   ServicesController servicesController=Get.put(ServicesController());
 
@@ -24,7 +24,7 @@ class WebPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-            'services2'.tr
+            'services4'.tr
         ),
       ),
       body: SingleChildScrollView(
@@ -33,7 +33,7 @@ class WebPage extends StatelessWidget {
           children: [
             ClipRect(
               child: Image.network(
-                'https://moharamradwan.com/wp-content/uploads/2023/12/Plan-de-travail-1.png',
+                "https://moharamradwan.com/wp-content/uploads/2023/12/Fichier-1-1-1024x593.png",
                 width: double.infinity,
                 height: 200,
                 fit: BoxFit.fill,
@@ -46,15 +46,14 @@ class WebPage extends StatelessWidget {
                 children: [
 
 
-
                   SizedBox(
                     height: 15.0,
                   ),
-                  CenterHeaderText(text: "web_development".tr),
+                  HeaderText(text: "online_store_title".tr, color: AppColors.primary,),
                   const SizedBox(
                     height: 10,
                   ),
-                  BigContentText(text: "web_development_content".tr),
+                  BigContentText(text: "online_store_content".tr),
                   const SizedBox(
                     height: 20,
                   ),
@@ -79,73 +78,18 @@ class WebPage extends StatelessWidget {
                     itemBuilder: (BuildContext context, int index, int realIndex) {
                       return DistinguishesWidget(
                         imageUrl: servicesController.distinguishesIcons[index],
-                        title: servicesController.webDistinguishesTitle[index],
-                        content: servicesController.webDistinguishesContent[index],
+                        title: servicesController.onlineStoreDistinguishesTitle[index],
+                        content: servicesController.onlineStoreDistinguishesContent[index],
                       );
-                    }, itemCount: servicesController.distinguishesIcons.length,
-                  ),
-
-                  SizedBox(
-                    height: 20.0,
-                  ),
-                  CenterHeaderText(text: "maintenance_services".tr) ,
-                  SizedBox(
-                    height: 10.0,
+                    }, itemCount: servicesController.onlineStoreDistinguishesTitle.length,
                   ),
 
 
-
-
-                  ClipRect(
-                    child: Image.network(
-                      'https://moharamradwan.com/wp-content/uploads/2023/12/3215199-1-scaled.jpg',
-                      width: double.infinity,
-                      height: 250,
-                      fit: BoxFit.fill,
-                    ),
-                  ),
-
-                  SizedBox(
-                    height: 10.0,
-                  ),
-                  GridView.builder(
-                    shrinkWrap: true,
-                    physics: const NeverScrollableScrollPhysics(),
-                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCountAndFixedHeight(
-                      mainAxisSpacing: 4.0,
-                      crossAxisSpacing: 2,
-                      height: 210,
-                      crossAxisCount: 1,
-                    ),
-                    itemBuilder:  (_, index) {
-                      return DistinguishesWidget(
-                        imageUrl: servicesController.maintenanceIcons[index],
-                        title: servicesController.webMaintenanceTitle[index],
-                        content: servicesController.webMaintenanceContent[index],
-                      );
-                    },
-                    itemCount: servicesController.webMaintenanceContent.length,
-                  ),
 
                   const SizedBox(
                     height: 30,
                   ),
-                  CenterHeaderText(text: "applications_we_designed".tr),
-                  const SizedBox(
-                    height: 20,
-                  ),
 
-                  ClipRect(
-                    child: Image.network(
-                      'https://moharamradwan.com/wp-content/uploads/2023/12/creative-agency-landing-page-sketch-1.png',
-                      width: double.infinity,
-                      height: 200,
-                      fit: BoxFit.fill,
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 20,
-                  ),
 
                   GridView.builder(
                     shrinkWrap: true,
@@ -168,8 +112,8 @@ class WebPage extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              CenterHeaderText(text: servicesController.numWebTitle[index]),
-                              ContentText(text: servicesController.numWebContent[index]),
+                              CenterHeaderText(text: servicesController.onlineStoreNumTitle[index]),
+                              ContentText(text: servicesController.onlineStoreNumContent[index]),
                             ],
                           ),
                         ),
@@ -177,6 +121,19 @@ class WebPage extends StatelessWidget {
                     },
                     itemCount: servicesController.numContent.length,
                   ),
+
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  ClipRect(
+                    child: Image.network(
+                      "https://moharamradwan.com/wp-content/uploads/2023/12/image-removebg-preview-1.png",
+                      width: double.infinity,
+                      height: 200,
+                      fit: BoxFit.fill,
+                    ),
+                  ),
+
 
                   const SizedBox(
                     height: 30,
@@ -192,16 +149,16 @@ class WebPage extends StatelessWidget {
                     gridDelegate: const SliverGridDelegateWithFixedCrossAxisCountAndFixedHeight(
                       mainAxisSpacing: 4.0,
                       crossAxisSpacing: 2,
-                      height: 230,
+                      height: 250,
                       crossAxisCount: 1,
                     ),
                     itemBuilder:  (_, index) {
                       return QuestionsWidget(
-                        question: servicesController.webQuestionsApp[index],
-                        answer: servicesController.webAnswersApp[index],
+                        question: servicesController.onlineStoreQuestions[index],
+                        answer: servicesController.onlineStoreAnswers[index],
                       );
                     },
-                    itemCount: servicesController.webQuestionsApp.length,
+                    itemCount: servicesController.onlineStoreAnswers.length,
                   ),
 
 

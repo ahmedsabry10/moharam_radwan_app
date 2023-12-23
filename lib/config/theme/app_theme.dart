@@ -34,7 +34,7 @@ ThemeData appTheme() {
           fontWeight: FontWeight.bold),
     ),
     appBarTheme: AppBarTheme(
-        centerTitle: true,
+        centerTitle: false,
         color: HexColor('#922B21'),
         elevation: 0,
         iconTheme: IconThemeData(

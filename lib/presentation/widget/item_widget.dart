@@ -1,7 +1,9 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:iconly/iconly.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../config/theme/app_colors.dart';
 
@@ -14,6 +16,32 @@ class ItemWidget extends StatefulWidget {
 }
 
 class _ItemWidgetState extends State<ItemWidget> {
+
+  void _launcherUrl(int value) async {
+
+    String url = "";
+    if (value == 1) {
+      ///whatsapp
+      url = "https://wa.me/+971588421241";
+    } else if (value == 2) {
+      ///facebook
+      url = "https://www.facebook.com/MoharamRadwan.Ads";
+    } else if (value == 3) {
+      ///tiktok
+      url = "https://www.tiktok.com/@moharam.radwan";
+    } else if (value == 4) {
+      ///gmail
+      url = "mailto:moharamabdelsabour1@gmail.com";
+    }
+    else if (value == 5) {
+      ///instagram
+      url = "https://www.instagram.com/moharam.radwan.ae/";
+    }
+    final Uri uri = Uri.parse(url);
+    if (await launchUrl(uri, mode: LaunchMode.externalApplication)) {
+      throw "can\,t launch url";
+    }
+  }
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -102,7 +130,9 @@ class _ItemWidgetState extends State<ItemWidget> {
             const Spacer(),
             ///Add to Cart
             InkWell(
-              onTap: () {},
+              onTap: () {
+                _launcherUrl(1);
+              },
               child: Container(
                 height: 50.0,
                 width: double.infinity,
@@ -128,7 +158,7 @@ class _ItemWidgetState extends State<ItemWidget> {
                       width: 10.0,
                     ),
                     const Icon(
-                      IconlyBold.paper,
+                      FontAwesomeIcons.whatsapp,
                       color: Colors.white,
                     ),
                   ],
@@ -136,173 +166,6 @@ class _ItemWidgetState extends State<ItemWidget> {
               ),
             ),
 
-            /*
-                Padding(
-                  padding: const EdgeInsets.only(left: 10.0, right: 10.0,bottom: 4.0,top: 8.0),
-                  child: Row(
-                    children: [
-                      Text(
-                        AppCubit.get(context).isArabic? '${widget.product.arabicName}':'${widget.product.englishName}',
-
-
-                        style: const TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 20.0,
-                          color:Colors.black87,
-
-                        ),
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
-
-                      ),
-                      Spacer(),
-                    ],
-                  ),
-                ),
-
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                  child: Row(
-                    children: [
-                      Text(
-                        AppCubit.get(context).isArabic? 'السعر لكل ${widget.product.unit}':'price per ${widget.product.englishUnit}' ,
-                        style: const TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 13.0,
-                          color:Colors.grey,
-
-                        ),
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
-
-                      ),
-                      Spacer(),
-                    ],
-                  ),
-                ),
-                ///price and add to bag
-                Padding(
-                  padding: const EdgeInsets.symmetric(vertical:10, horizontal: 10.0),
-                  child: widget.product.priceDes== ""?
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Text(
-                        AppCubit.get(context).isArabic?
-                        ' ${widget.product.price} ${widget.product.arabicCoin}':' ${widget.product.price} ${widget.product.englishCoin}',
-
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
-                        style: const TextStyle(
-                            fontSize: 15,
-                            color: Colors.green,
-                            fontWeight: FontWeight.bold
-                        ),
-                      ),
-                      Spacer(),
-                      InkWell(
-                        onTap:(){
-
-                          DialogUtils.showMessage(context,
-                              AppCubit.get(context).isArabic?
-                              'هل تريد اضافه المنتج للحقيبه؟':'Do you want to add this product to your bag ?',
-                              posActionTitle:
-                              AppCubit.get(context).isArabic? 'نعم':'yes',
-                              posAction: (){
-                                MyDataBase.copyDocumentWithSameId(sourceCollectionPath, widget.product.id!, destinationCollectionPathAddToBag);
-                                Constants.showToast(msg:
-                                AppCubit.get(context).isArabic?
-                                'تمت الاضافه بنجاح':'Added Successfully');
-                              },
-                              negActionTitle: AppCubit.get(context).isArabic?'لا':'No',
-                              negAction: (){}
-                          );
-
-                        },
-
-
-                        child: Container(
-                          height: 40.0,
-                          width: 40.0,
-                          decoration: BoxDecoration(
-                            color:Colors.green, //colors[widget.index%colors.length],
-
-                            borderRadius: const BorderRadius.all(Radius.circular(10)),),
-                          child: Icon(
-                            IconBroken.Bag_2,
-                            color: Colors.white,
-                          ),
-
-                        ),
-                      ),
-                    ],
-                  ): Row(
-                    children: [
-                      Text(
-                        AppCubit.get(context).isArabic?
-                        ' ${widget.product.priceDes} ${widget.product.arabicCoin}':' ${widget.product.priceDes} ${widget.product.englishCoin}',
-
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
-                        style: const TextStyle(
-                            color: Colors.green,
-
-                            fontSize: 15,
-                            fontWeight: FontWeight.bold
-                        ),
-                      ),
-                      SizedBox(
-                        width: 5.0,
-                      ),
-                      Text(
-                        '${widget.product.price}',
-                        style: new TextStyle(
-                          fontSize: 13.0,
-                          color: Colors.grey,
-                          fontWeight: FontWeight.bold,
-                          decoration: TextDecoration.lineThrough,
-                        ),
-                      ),
-                      Spacer(),
-                      InkWell(
-                        onTap:(){
-
-                          DialogUtils.showMessage(context,  AppCubit.get(context).isArabic?
-                          'هل تريد اضافه المنتج للحقيبه؟':'Do you want to add this product to your bag ?',
-                              posActionTitle:  AppCubit.get(context).isArabic?'نعم':'yes',
-                              posAction: (){
-                                MyDataBase.copyDocumentWithSameId(sourceCollectionPath, widget.product.id!, destinationCollectionPathAddToBag);
-                                Constants.showToast(msg:
-                                AppCubit.get(context).isArabic?
-                                'تمت الاضافه بنجاح':'Added Successfully');
-
-                              },
-                              negActionTitle:  AppCubit.get(context).isArabic?'لا':'No',
-                              negAction: (){}
-                          );
-
-                        },
-
-                        child: Container(
-                          height: 40.0,
-                          width: 40.0,
-                          decoration: BoxDecoration(
-                            color:Colors.green, //colors[widget.index%colors.length],
-
-                            borderRadius: const BorderRadius.all(Radius.circular(10)),),
-                          child: Icon(
-                            IconBroken.Bag_2,
-                            color: Colors.white,
-                          ),
-
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-
-                 */
           ],
         ),
       ),

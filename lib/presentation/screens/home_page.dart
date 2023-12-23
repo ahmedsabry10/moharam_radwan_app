@@ -194,21 +194,6 @@ class _HomeState extends State<Home> {
                   ),
 
 
-                  ListTile(
-                    onTap: () {
-                      Get.to(()=>MobileApplication());
-                    },
-                    leading: const Icon(
-                      IconlyBold.chart,
-                    ),
-                    title: Text(
-                      "test",
-                      style: const TextStyle(
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
-
 
 
                   const Spacer(),

@@ -7,13 +7,13 @@ Widget buildServicesItem(
       required int index,
       required String title,
       required String icons,
-      //required Widget screens,
+      required String screens,
     }) =>
     InkWell(
         onTap: ({
           int index = 0,
         }) {
-         // Get.to(()=>screens);
+          Get.toNamed(screens);
         },
         child: Card(
           color: Colors.white,

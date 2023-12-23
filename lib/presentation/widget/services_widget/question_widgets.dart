@@ -51,7 +51,7 @@ class QuestionsWidget extends StatelessWidget {
                       child: Text(
                         answer,
                         overflow: TextOverflow.ellipsis,
-                        maxLines: 3,
+                        maxLines: 5,
 
                         style: const TextStyle(
                             fontSize: 16,

@@ -4,7 +4,12 @@ import 'package:moharam_radwan/presentation/screens/drawer_screens/contact_us_sc
 import 'package:moharam_radwan/presentation/screens/drawer_screens/our_service.dart';
 import 'package:moharam_radwan/presentation/screens/drawer_screens/who_are_we.dart';
 import 'package:moharam_radwan/presentation/screens/home_page.dart';
+import 'package:moharam_radwan/presentation/screens/services_screens/digital_marketing.dart';
+import 'package:moharam_radwan/presentation/screens/services_screens/engine_optmization.dart';
+import 'package:moharam_radwan/presentation/screens/services_screens/graphic_design.dart';
+import 'package:moharam_radwan/presentation/screens/services_screens/media_production.dart';
 import 'package:moharam_radwan/presentation/screens/services_screens/mobile_app.dart';
+import 'package:moharam_radwan/presentation/screens/services_screens/online_store.dart';
 import 'package:moharam_radwan/presentation/screens/services_screens/web_page.dart';
 import 'package:moharam_radwan/presentation/screens/splash_page.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -40,8 +45,20 @@ class MyApp extends StatelessWidget {
         GetPage(name: "/who_are_we", page: ()=>WhoAreWe()),
         GetPage(name: "/contact_us", page: ()=>ContactUsScreen()),
         GetPage(name: "/our_services", page: ()=>OurServices()),
+
         GetPage(name: "/mobile_app", page: ()=>MobileApplication()),
         GetPage(name: "/web_page", page: ()=>WebPage()),
+        GetPage(name: "/engine_optimization", page: ()=>EngineOptimization()),
+        GetPage(name: "/online_store", page: ()=>OnlineStorePage()),
+        GetPage(name: "/digital_marketing", page: ()=>DigitalMarketing()),
+        GetPage(name: "/graphic_design", page: ()=>GraphicDesign()),
+        GetPage(name: "/media_production", page: ()=>MediaProduction()),
+
+
+
+
+
+
 
 
       ],

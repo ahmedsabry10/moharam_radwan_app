@@ -85,7 +85,7 @@ class DistinguishesWidget extends StatelessWidget {
                       child: Text(
                         content,
                         overflow: TextOverflow.ellipsis,
-                        maxLines: 3,
+                        maxLines: 6,
 
                         style: const TextStyle(
                             fontSize: 16,

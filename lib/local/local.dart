@@ -38,14 +38,18 @@ class MyLocale implements Translations{
       "email":"البريد الالكتروني",
 
       "services1":"تطبيقات الجوال",
-      "services2":"المواقع الالكترونيه",
-      "services3":"تحسين محركات البحث",
-      "services4":"المتاجر الالكترونية",
-      "services5":"التسويق الرقمى",
-      "services6":"البرمجيات المخصصه للأعمال",
-      "services7":"الحملات الاعلامية",
-      "services8":"تصميم الجرافيك",
-      "services9":"الانتاج الاعلامي",
+      "services2":"مواقع الكترونيه",
+      "services3":"محركات البحث",
+      "services4":"متاجر الكترونية",
+      "services5":"تسويق رقمى",
+      "services6":"البرمجيات ",
+      "services7":"حملات اعلامية",
+      "services8":"تصميم جرافيك",
+      "services9":"انتاج اعلامي",
+
+
+      ///mobile app
+
       "design_services":"خدمات تصميم التطبيقات",
       "design_services_content1":"نقوم بتقديم تجربة مستخدم متميزة من خلال تصميم واجهات جذابة وسهلة الاستخدام، مما يعزز تفاعل المستخدم مع التطبيق",
       "distinguishes":"ما يميزنا عن غيرنا",
@@ -73,6 +77,8 @@ class MyLocale implements Translations{
       "asked_questions":"الاسئلة المتكررة",
 
 
+      ///web
+
       "web_development":"خدمات تطوير المواقع",
       "web_development_content":"نقدم تصميمًا ملهمًا لواجهات المستخدم يجمع بين الجاذبية وسهولة الاستخدام، لتحسين تجربة زوار موقعك",
       "ux":"تجربة المستخدم (UX)",
@@ -87,6 +93,82 @@ class MyLocale implements Translations{
 
       "database_integration_c1":"نقدم حلا شاملا لتكامل قواعد البيانات مع موقعك , مما يمكنك من ادارة بياناتك بكفاءه وفعالية",
       "improve_site_performance_c1":"نقدم دعما فنيا مستمرا للتعامل مع أية تحديات أو مشاكل  تواجه مستخدم الموقع",
+
+
+      ///تحسين محركات البحث
+      "engine_optimization_title":"نقدم خدمات SEO المتقدمة: زيادة رؤية موقعك وتحسين تصنيفاته",
+      "engine_optimization_content1":"في عصر الإنترنت اليوم، يعد تحسين محركات البحث (SEO) حجر الزاوية لضمان أن يتم اكتشاف موقعك بشكل فعال ويظهر بشكل متقدم في نتائج البحث. تقدم خدماتنا المتخصصة في SEO حلاً شاملاً لتعزيز رؤية موقعك وتحسين موقعه في ترتيب محركات البحث.",
+      "keyword_analysis":"تحليل الكلمات الرئيسية",
+      "keyword_analysis_content":"نقوم باجراء تحليل شامل للكلمات الرئيسية المرتبطة بنشاطك التجاري لتحديد الكلمات الأكثر فاعلية في تحسين ترتيب موقعك",
+      "linking_security":"أمان الربط وبناء الروابط",
+      "linking_security_content":"نقوم بتنفيذ استراتيجيات بناء الروابط بشكل أمن وفعال لتعزيز السمعة الرقمية لموقعك وتحسين موقعه في نتائج البحث ",
+      "content_review":"مراجعه المحتوى",
+      "content_review_content":"نقدم استعراضا دوريا للمحتوى علي موقعك , مع التركيز على تحسين جودة المحتوى والكتابة بطريقة تجذب محركات البحث",
+      "from_our_work":"من اعمالنا",
+      /// online store
+      "online_store_title":"ابدأ رحلة نجاح متجرك الإلكتروني مع خدمات تصميم وتطوير مواقع مخصصة وفعّالة",
+      "online_store_content":"تمتلك متاجر الكترونية القوة لتحويل الزوار إلى عملاء، وتجعل تجربة التسوق عبر الإنترنت ممتعة وفعّالة. نحن نقدم خدمات تصميم وتطوير متاجر الكترونية لضمان تحقيق أقصى استفادة من وجودك على الويب.",
+
+      "shopping_experience":"تجربة تسوق متميزة",
+      "shopping_experience_content":"نضمن توفيير تجربة تسوق متميزة تشجع على التفاعل وزيادة معدل التحويل",
+      "content_management_system":"نظام ادارة محتوي فعال ",
+      "content_management_system_content":"نقدم أنظمة ادارة محتوى (CMS) قوية تتيح لك ادارة المنتجات وتحديثات الموقع بكفاءة",
+      "improve_transaction_security":"تحسين أمان المعاملات",
+      "improve_transaction_security_content":"نقوم بتكامل طبقات اضافية من الأمان لحماية المعلومات الحساسة للعملاء أثناء عمليات الدفع",
+
+
+      ///digital marketing
+      "digital_marketing_content":"مرحبًا بك في محرم رضوان، المكان الذي يجسد التميز في عالم التسويق الرقمي. نحن نفتخر بتقديم خدمات تسويقية استثنائية تمزج بين الإبداع والابتكار لتحقيق أهداف عملائنا.",
+
+      "com_digital_marketing":"تسويق رقمي شامل",
+      "com_digital_marketing_content":"نقدم حلول تسويقية متكاملة تغطي كافة جوانب الوجود الرقمي , من تصميم المواقع وتحسين محركات البحث الى ادارة وسائل التواصل الاجتماعي والحملات الاعلانيه عبر الانترنت ",
+      "data_analysis":"تحليل البيانات",
+      "data_analysis_content":"نستخدم أحدث التقنيات في تحليل البيانات لفهم سلوك العملاء واستهداف الجمهور المناسب , نقدم تقارير دورية شفافة توفر رؤية دقيقة حول أداء حملات التسويق وتقديم توصيات للتحسين المستمر",
+      "unique_strategy":"استراتيجية فريدة",
+      "unique_strategy_content":"نقدم استراتيجيات تسويقية معدة خصيصا لاحتياجات كل عميل , مما يضمن تحقيق أقصي قدر من الفاعلية والتأثير",
+      "advanced_technology":"تكنولوجيا متقدمة",
+      "advanced_technology_content":"نستخدم أحدث التقنيات والادوات فى مجال التسويق الرقمي لضمان تحقيق نتائج ملموسة وملموسة",
+      "dedicated_team":"فريق متخصص",
+      "dedicated_team_content":"يضم فريقنا خبراء في مجالات التسويق الرقمي وتحليل البيانات , مما يمنح عملائنا الثقة في تحقيق افضل النتائج.",
+      "numbers_achieved":"ارقام حققناها",
+
+
+      ///graphic design
+      "graphic_design_title":"نقدم خدمات تصميم شاملة للهوية البصرية",
+      "graphic_design_content1":"مرحبًا بك في محرم رضوان، حيث يتجسد الإبداع والفن في عالم تصميم الجرافيك. نحن هنا لتحويل أفكارك إلى أعمال فنية بديعة وتصاميم تلفت الأنظار.",
+      "visual_identity_design":"تصميم الهوية البصريه",
+      "visual_identity_design_content":"نقدم خدمات تصميم شاملة للهوية البصرية , بدءا من انشاء شعارات مميزة الي ابتكار تصاميم تعبيرية للواجهات الرقمية والمطبوعات .",
+      "Website_application_design":"تصميم المواقع والتطبيقات",
+      "Website_application_design_content":"يعمل فريقنا علي تحسين تجربة المستخدم من خلال تصميم واجهات مستخدم جذابة ووظيف للمواقع والتطبيقات.",
+
+      "marketing_materials_design":"تصميم المواد التسويقية",
+      "marketing_materials_design_content":"نقدم تصميما احترافيا للمواد التسويقية مثل البنرات الأعلانية , والكتيبات , لتعزيز تواجد علامتك التجارية بشكل فعال.",
+
+      "unique_creativity":"ابداع فريد",
+      "unique_creativity_content":"نحن نضع الابداع في قلب كل تصميم نقوم به مع التركيز علي تقديم اعمال فنية تتميز بالتميز والابتكار",
+      "elaborate_design":"تصميم متقن",
+      "elaborate_design_content":"يعمل فريقنا على تقديم تصاميم دقيقة ومتقنة , مستوحاة من أحدث اتجاهات التصميم وتكنولوجيا الجرافيك ",
+
+      "interaction_with_the_customer":"التفاعل مع العميل",
+      "interaction_with_the_customer_content":"نحن نفهم  أهمية التواصل الفعال مع عملائنا . لذا , نسعي دتئما لفهم رؤيتك وتحويلها الى تصاميم واقعية تعكس هويتك.",
+
+
+      ///media production
+      "media_production":"إنتاج الإعلام: رؤية جديدة للتواصل",
+      "media_production_content":"منصتنا، حيث يتحول الإبداع إلى وسائل إعلامية متقدمة. نحن نقدم خدمات إنتاج إعلامي فريدة تربط بين القصص الملهمة والتكنولوجيا الرائدة لتحقيق تأثير لا مثيل له.",
+      "video_production":"انتاج الفديو",
+      "video_production_content":"من انتاج الفديو الترويجي الي الوثائقيات , نقدم حلولا متكاملة لتلبية احتياجاتك , فريق الأنتاج لدينا يعمل علي تحويل أفكارك الي قصص بصرية مذهلة.",
+      "audio_production":"الانتاج الصوتي",
+      "audio_production_content":"نحن نقدم خدمات انتاج صوتي تشمل تسجيل الأصوات , انتاج بودكاست , وخلق تجارب صوتية فريدة لتعزيز تواجدك الأعلامي",
+      "photographic_development":"التطوير الفوتوغرافي",
+      "photographic_development_content":"من تصوير المنتجات الي التصوير الفوتوغرافي الفني , نقدم خدمات التصوير لتلبية احتياجات التسويق والتوثيق.",
+      "excel_thanks":"نتفوق بفضل",
+      "talented_team":"فريق موهوب ",
+      "talented_team_content":"يعمل فريقنا علي تقديم تصاميم دقيقة ومتقنة , مستوحاه من أحدث اتجاهات التصميم وتكنولوجيا الجرافيك .",
+      "advanced_technology":"تقنيه متقدمة",
+      "advanced_technology_content":"تستخدم أحدث التقنيات في عمليات الانتاج لضمان جودة عالية وتحقيق تأثير بصري وسمعي مميز.",
+      "interaction_with_customer":"التفاعل مع العميل",
+      "interaction_with_customer_content":"نحن نفهم أهميه التواصل الفعال مع عملائنا . لذا , نسعى دائما رؤيتك وتحويلها الى تصاميم واقعية تعكس هويتك.",
 
     },
     "en":{
@@ -122,15 +204,21 @@ class MyLocale implements Translations{
       "facebook":"Facebook",
       "instagram":"Instagram",
       "email":"Email Address",
-      "services1":"mobile applications",
+
+
+      "services1":"MobileApps",
       "services2":"Websites",
-      "services3":"Search Engine Optimization",
-      "services4":"Online stores",
-      "services5":"Digital Marketing",
-      "services6":"Software used in its design",
-      "services7":"Media campaigns",
-      "services8":"Graphic Design",
-      "services9":":media production",
+      "services3":"EngineOptimization",
+      "services4":"OnlineStores",
+      "services5":"DigitalMarketing",
+      "services6":"Software",
+      "services7":"MediaCampaigns",
+      "services8":"GraphicDesign",
+      "services9":"MediaProduction",
+
+
+
+      ///mobile app
       "design_services":"Application design services",
       "design_services_content1":"We provide an outstanding user experience by designing attractive and easy-to-use interfaces, which enhances user interaction with the application",
       "distinguishes":"What distinguishes us from others",
@@ -155,6 +243,8 @@ class MyLocale implements Translations{
       "applications_we_designed":"Applications we designed",
       "asked_questions":"Frequently asked questions",
 
+      ///web
+
 
       "web_development":"Website development services",
       "web_development_content":"We provide inspiring user interface design that combines attractiveness and ease of use, to improve the experience of your site visitors",
@@ -171,6 +261,89 @@ class MyLocale implements Translations{
       "improve_site_performance":"Improve site performance",
       "database_integration_c1":"We offer a comprehensive solution to integrate databases with your site, enabling you to manage your data efficiently and effectively",
       "improve_site_performance_c1":"We provide ongoing technical support to deal with any challenges or problems facing the site user",
+
+
+      ///تحسين محركات البحث
+
+      "engine_optimization_title":"We provide advanced SEO services: increase your site's visibility and improve its rankings",
+      "engine_optimization_content1":"In today's Internet age, search engine optimization (SEO) is the cornerstone of ensuring that your site is effectively discovered and appears highly in search results. Our specialized SEO services provide a comprehensive solution to enhance your site's visibility and improve its position in search engine rankings.",
+
+      "keyword_analysis":"Keyword analysis",
+      "keyword_analysis_content":"We conduct a comprehensive analysis of the keywords related to your business to determine the most effective words in improving your site's ranking",
+      "linking_security":"Linking security and link building",
+      "linking_security_content":"We implement safe and effective link building strategies to enhance your site's digital reputation and improve its position in search results",
+      "content_review":"Content review",
+      "content_review_content":"We provide periodic reviews of the content on your site, focusing on improving the quality of the content and writing in a way that attracts search engines",
+      "from_our_work":"From our work",
+
+
+      /// online store
+      "online_store_title":"Start your online store's success journey with customized and effective website design and development services",
+      "online_store_content":"Online stores have the power to convert visitors into customers and make the online shopping experience fun and efficient. We provide online store design and development services to ensure you get the most out of your web presence.",
+
+      "shopping_experience":"An outstanding shopping experience",
+      "shopping_experience_content":"We guarantee to provide an outstanding shopping experience that encourages interaction and increases the conversion rate",
+      "content_management_system":"Effective content management system",
+      "content_management_system_content":"We offer powerful content management systems (CMS) that allow you to manage products and website updates efficiently",
+      "improve_transaction_security":"Improve transaction security",
+      "improve_transaction_security_content":"We integrate additional layers of security to protect customers' sensitive information during payment processes",
+
+
+      ///digital marketing
+      "digital_marketing_content":"Welcome to Moharam Radwan, a place that embodies excellence in the world of digital marketing. We pride ourselves on providing exceptional marketing services that blend creativity and innovation to achieve our clients' goals.",
+
+      "com_digital_marketing":"Comprehensive digital marketing",
+      "com_digital_marketing_content":"We provide integrated marketing solutions that cover all aspects of digital presence, from website design and search engine optimization to social media management and online advertising campaigns.",
+      "data_analysis":"Data Analysis",
+      "data_analysis_content":"We use the latest technologies in data analysis to understand customer behavior and target the appropriate audience. We provide transparent periodic reports that provide an accurate view of the performance of marketing campaigns and provide recommendations for continuous improvement.",
+      "unique_strategy":"Unique strategy",
+      "unique_strategy_content":"We provide marketing strategies tailored to the needs of each client, ensuring maximum effectiveness and impact",
+      "advanced_technology":"Advanced technology",
+      "advanced_technology_content":"We use the latest technologies and tools in the field of digital marketing to ensure tangible and tangible results",
+      "dedicated_team":"Dedicated team",
+      "dedicated_team_content":"Our team includes experts in the fields of digital marketing and data analysis, which gives our clients confidence in achieving the best results.",
+      "numbers_achieved":"Numbers we achieved",
+
+
+      ///graphic design
+      "graphic_design_title":"We provide comprehensive visual identity design services",
+      "graphic_design_content1":"Welcome to Moharam Radwan, where creativity and art are embodied in the world of graphic design. We are here to transform your ideas into exquisite works of art and eye-catching designs.",
+      "visual_identity_design":"Visual identity design",
+      "visual_identity_design_content":"We provide comprehensive design services for visual identity, starting from creating distinctive logos to creating expressive designs for digital interfaces and publications.",
+      "Website_application_design":"Website and application design",
+      "Website_application_design_content":"Our team works to improve the user experience by designing attractive user interfaces and functionality for websites and applications.",
+      "marketing_materials_design":"Marketing materials design",
+      "marketing_materials_design_content":"We provide professional design of marketing materials, such as advertising banners and brochures, to effectively enhance your brand’s presence.",
+      "unique_creativity":"Unique creativity",
+      "unique_creativity_content":"We put creativity at the heart of every design we make, with a focus on providing artistic works that are distinguished by excellence and innovation",
+      "elaborate_design":"Elaborate design",
+      "elaborate_design_content":"Our team works to provide precise and elaborate designs, inspired by the latest design trends and graphic technology",
+      "interaction_with_the_customer":"Interaction with the customer",
+      "interaction_with_the_customer_content":"We understand the importance of effective communication with our customers. Therefore, we always strive to understand your vision and transform it into realistic designs that reflect your identity.",
+
+
+      ///media production
+      "media_production":"Media production: a new vision of communication",
+      "media_production_content":"Our platform, where creativity turns into advanced media. We provide unique media production services that combine inspiring stories with leading-edge technology to achieve unparalleled impact.",
+      "video_production":"Video production",
+      "video_production_content":"From producing promotional videos to documentaries, we offer integrated solutions to meet your needs. Our production team works to transform your ideas into amazing visual stories.",
+      "audio_production":"Audio production",
+      "audio_production_content":"We provide audio production services that include recording sounds, producing podcasts, and creating unique audio experiences to enhance your media presence.",
+      "photographic_development":"Photographic development",
+      "photographic_development_content":"From product photography to artistic photography, we provide photography services to meet your marketing and documentation needs.",
+
+      "excel_thanks":"We excel thanks to you",
+      "talented_team":"Talented team",
+      "talented_team_content":"Our team works to provide accurate and elaborate designs, inspired by the latest design trends and graphic technology.",
+
+      "advanced_technology":"Advanced technology",
+      "advanced_technology_content":"The latest technologies are used in production processes to ensure high quality and achieve a distinctive visual and audio effect.",
+
+      "interaction_with_customer":"Interaction with the customer",
+      "interaction_with_customer_content":"We understand the importance of effective communication with our customers. Therefore, we always seek your vision and transform it into realistic designs that reflect your identity.",
+
+
+
 
 
     }
