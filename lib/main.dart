@@ -45,7 +45,6 @@ class MyApp extends StatelessWidget {
         GetPage(name: "/who_are_we", page: ()=>WhoAreWe()),
         GetPage(name: "/contact_us", page: ()=>ContactUsScreen()),
         GetPage(name: "/our_services", page: ()=>OurServices()),
-
         GetPage(name: "/mobile_app", page: ()=>MobileApplication()),
         GetPage(name: "/web_page", page: ()=>WebPage()),
         GetPage(name: "/engine_optimization", page: ()=>EngineOptimization()),
@@ -53,12 +52,6 @@ class MyApp extends StatelessWidget {
         GetPage(name: "/digital_marketing", page: ()=>DigitalMarketing()),
         GetPage(name: "/graphic_design", page: ()=>GraphicDesign()),
         GetPage(name: "/media_production", page: ()=>MediaProduction()),
-
-
-
-
-
-
 
 
       ],
