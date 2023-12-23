@@ -7,7 +7,9 @@ import 'package:hexcolor/hexcolor.dart';
 import 'package:iconly/iconly.dart';
 import 'package:moharam_radwan/config/theme/app_colors.dart';
 import 'package:moharam_radwan/presentation/screens/drawer_screens/contact_us_screen.dart';
+import 'package:moharam_radwan/presentation/screens/drawer_screens/our_service.dart';
 import 'package:moharam_radwan/presentation/screens/drawer_screens/who_are_we.dart';
+import 'package:moharam_radwan/presentation/screens/services_screens/mobile_app.dart';
 import 'package:moharam_radwan/presentation/widget/item_widget.dart';
 import 'package:moharam_radwan/presentation/widget/opinion_widget.dart';
 import 'package:moharam_radwan/presentation/widget/package_widget.dart';
@@ -139,13 +141,12 @@ class _HomeState extends State<Home> {
                     ),
                   ),
 
-                  ///change password
                   ListTile(
                     onTap: () {
-
+                      Get.to(()=>OurServices());
                     },
                     leading: const Icon(
-                      IconlyBold.lock,
+                      IconlyBold.chart,
                     ),
                     title: Text(
                       "our_services".tr,
@@ -182,7 +183,7 @@ class _HomeState extends State<Home> {
                       Get.to(()=>ContactUsScreen());
                     },
                     leading: const Icon(
-                      IconlyBold.user_3,
+                      IconlyBold.message,
                     ),
                     title: Text(
                       'contact_us'.tr,
@@ -193,7 +194,20 @@ class _HomeState extends State<Home> {
                   ),
 
 
-
+                  ListTile(
+                    onTap: () {
+                      Get.to(()=>MobileApplication());
+                    },
+                    leading: const Icon(
+                      IconlyBold.chart,
+                    ),
+                    title: Text(
+                      "test",
+                      style: const TextStyle(
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
 
 
 

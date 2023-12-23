@@ -3,9 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
 import 'package:moharam_radwan/config/theme/app_colors.dart';
+import 'package:moharam_radwan/local/services_controller.dart';
 import 'package:moharam_radwan/presentation/widget/text_widget.dart';
 
 import '../../../config/shared/fixed_grid.dart';
+import '../../widget/animated_logo.dart';
 import '../../widget/carousel_item.dart';
 
 class WhoAreWe extends StatelessWidget {
@@ -25,6 +27,7 @@ class WhoAreWe extends StatelessWidget {
     "https://moharamradwan.com/wp-content/uploads/2023/12/nGQ63cRu0qyzFI-kHHfzobhAzxtB64dw0E_8m1O3m_U_plaintext_638375561260253137-1536x1536.jpg",
   ];
 
+  ServicesController servicesController=Get.put(ServicesController());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -56,18 +59,8 @@ class WhoAreWe extends StatelessWidget {
               const SizedBox(
                 height: 10,
               ),
-              Row(
-                children: [
-                  const Spacer(),
-                  Lottie.asset('assets/images/splash.json',
-                      frameRate: FrameRate.composition,
-                    repeat: false,
-                    width: 300,
-                    height: 200
-                  ),
-                  const Spacer(),
-                ],
-              ),
+              AnimatedLogo(),
+
               GridView.builder(
                 shrinkWrap: true,
                 physics: const NeverScrollableScrollPhysics(),
@@ -75,7 +68,7 @@ class WhoAreWe extends StatelessWidget {
                   mainAxisSpacing: 4.0,
                   crossAxisSpacing: 2,
                   height: 100,
-                  crossAxisCount: 2,
+                  crossAxisCount: 3,
                 ),
                 itemBuilder:  (_, index) {
                   return Card(
@@ -89,16 +82,15 @@ class WhoAreWe extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          CenterHeaderText(text: "+145"),
-                          ContentText(text: "موقع مبرمج")
+                          CenterHeaderText(text: servicesController.numTitle[index]),
+                          ContentText(text: servicesController.numContent[index]),
                         ],
                       ),
                     ),
                   );
                 },
-                itemCount: 4,
+                itemCount: servicesController.numContent.length,
               ),
-
 
               const SizedBox(
                 height: 20,
@@ -133,7 +125,7 @@ class WhoAreWe extends StatelessWidget {
                   return OurWorkItem(
                     imageUrl: workImage[index] ,
                   );
-                }, itemCount: 3,
+                }, itemCount: workImage.length,
               ),
 
 

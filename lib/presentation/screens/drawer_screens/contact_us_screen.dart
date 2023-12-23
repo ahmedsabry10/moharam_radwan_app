@@ -7,6 +7,8 @@ import 'package:moharam_radwan/config/theme/app_colors.dart';
 import 'package:moharam_radwan/presentation/widget/text_widget.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../../widget/animated_logo.dart';
+
 class ContactUsScreen extends StatelessWidget {
   ContactUsScreen({super.key});
 
@@ -51,21 +53,7 @@ class ContactUsScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-
-                Row(
-                  children: [
-                    const Spacer(),
-                    Lottie.asset('assets/images/splash.json',
-                        frameRate: FrameRate.composition,
-                        repeat: false,
-                        width: 300,
-                        height: 250
-                    ),
-                    const Spacer(),
-                  ],
-                ),
-
-
+                const AnimatedLogo(),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 30.0),
                   child: Column(
@@ -76,11 +64,11 @@ class ContactUsScreen extends StatelessWidget {
                         },
                         child:Row(
                           children: [
-                            Icon(
+                            const Icon(
                               FontAwesomeIcons.whatsapp,
                               size: 40,
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 20.0,
                             ),
                             HeaderText(text: "whatsapp".tr,
@@ -98,11 +86,11 @@ class ContactUsScreen extends StatelessWidget {
                         },
                         child:Row(
                           children: [
-                            Icon(
+                            const Icon(
                               FontAwesomeIcons.facebook,
                               size: 40,
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 20.0,
                             ),
                             HeaderText(text: "facebook".tr,
@@ -120,12 +108,12 @@ class ContactUsScreen extends StatelessWidget {
                         },
                         child:Row(
                           children: [
-                            Icon(
+                            const Icon(
                                 Icons.tiktok,
                               color: Colors.black,
                               size: 40,
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 20.0,
                             ),
                             HeaderText(text: "tik_tok".tr, color: Colors.black,
@@ -142,11 +130,11 @@ class ContactUsScreen extends StatelessWidget {
                         },
                         child:Row(
                           children: [
-                            Icon(
+                            const Icon(
                                 FontAwesomeIcons.instagram,
                               size: 40,
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 20.0,
                             ),
                             HeaderText(text: "instagram".tr,
@@ -164,11 +152,11 @@ class ContactUsScreen extends StatelessWidget {
                         },
                         child:Row(
                           children: [
-                            Icon(
+                            const Icon(
                               IconlyLight.message,
                               size: 40,
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 20.0,
                             ),
                             HeaderText(text: "email".tr,

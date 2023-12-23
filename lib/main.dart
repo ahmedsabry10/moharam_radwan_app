@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:moharam_radwan/presentation/screens/drawer_screens/contact_us_screen.dart';
+import 'package:moharam_radwan/presentation/screens/drawer_screens/our_service.dart';
 import 'package:moharam_radwan/presentation/screens/drawer_screens/who_are_we.dart';
 import 'package:moharam_radwan/presentation/screens/home_page.dart';
+import 'package:moharam_radwan/presentation/screens/services_screens/mobile_app.dart';
+import 'package:moharam_radwan/presentation/screens/services_screens/web_page.dart';
 import 'package:moharam_radwan/presentation/screens/splash_page.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'config/theme/app_theme.dart';
@@ -36,6 +39,10 @@ class MyApp extends StatelessWidget {
         GetPage(name: "/homePage", page: ()=>Home()),
         GetPage(name: "/who_are_we", page: ()=>WhoAreWe()),
         GetPage(name: "/contact_us", page: ()=>ContactUsScreen()),
+        GetPage(name: "/our_services", page: ()=>OurServices()),
+        GetPage(name: "/mobile_app", page: ()=>MobileApplication()),
+        GetPage(name: "/web_page", page: ()=>WebPage()),
+
 
       ],
       debugShowCheckedModeBanner: false,
