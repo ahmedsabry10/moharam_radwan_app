@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import '../../config/theme/app_colors.dart';
 
 class OpinionsWidget extends StatelessWidget {
-  const OpinionsWidget({super.key});
+  String clientName;
+  String clientOpinion;
+  OpinionsWidget({super.key , required this.clientName, required this.clientOpinion});
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +43,7 @@ class OpinionsWidget extends StatelessWidget {
                       ),
                       Center(
                         child: Text(
-                          'Client Name',
+                        clientName,
                           overflow: TextOverflow.ellipsis,
                           maxLines: 1,
                           style: TextStyle(
@@ -72,9 +74,10 @@ class OpinionsWidget extends StatelessWidget {
                   Expanded(
                     child: Center(
                       child: Text(
+                        clientOpinion,
+                        textDirection: TextDirection.rtl,
                         overflow: TextOverflow.ellipsis,
                         maxLines: 3,
-                        'تعاون رائع وتفاعل سريع . لقد أحببنا تحسينات التصميم التي قدمها محرم رضوان',
                         style: const TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.bold),

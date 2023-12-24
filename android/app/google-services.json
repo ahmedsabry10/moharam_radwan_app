@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "288667125691",
+    "project_id": "boyo3-80a8b",
+    "storage_bucket": "boyo3-80a8b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:288667125691:android:68c926f41522b997f9669e",
+        "android_client_info": {
+          "package_name": "com.example.moharam_radwan"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmnIbMfmdaigNzY_iEwY4O5SPeLXHiyR0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
-import 'package:iconly/iconly.dart';
 import 'package:url_launcher/url_launcher.dart';
-
 import '../../config/theme/app_colors.dart';
+import '../../models/package_model.dart';
 
 class PackageWidget extends StatelessWidget {
-  const PackageWidget({super.key});
+  PackageModel packageModel;
+  PackageWidget({super.key , required this.packageModel});
 
   void _launcherUrl(int value) async {
 
@@ -47,7 +47,7 @@ class PackageWidget extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(
+            const SizedBox(
               height: 10.0,
             ),
             Row(
@@ -57,7 +57,7 @@ class PackageWidget extends StatelessWidget {
                 Expanded(
                   child: Center(
                     child: Text(
-                      'باقة بلا حدود',
+                      packageModel.name!,
                       overflow: TextOverflow.ellipsis,
                       maxLines: 1,
                       style: TextStyle(
@@ -70,7 +70,7 @@ class PackageWidget extends StatelessWidget {
               ],
             ),
 
-            SizedBox(
+            const SizedBox(
               height: 10.0,
             ),
             Row(
@@ -80,10 +80,12 @@ class PackageWidget extends StatelessWidget {
                 Expanded(
                   child: Center(
                     child: Text(
-                      'د.إ 1000 /شهريا',
+                      '${packageModel.price!}  د.إ  / ${packageModel.duration!}',
+                      textDirection: TextDirection.rtl,
+
                       overflow: TextOverflow.ellipsis,
                       maxLines: 1,
-                      style: TextStyle(
+                      style: const TextStyle(
                           fontSize: 15,
                           color: Colors.deepOrange,
                           fontWeight: FontWeight.bold),
@@ -93,7 +95,7 @@ class PackageWidget extends StatelessWidget {
               ],
             ),
 
-            SizedBox(
+            const SizedBox(
               height: 10.0,
             ),
             ///size with unit
@@ -106,9 +108,10 @@ class PackageWidget extends StatelessWidget {
                   Expanded(
                     child: Center(
                       child: Text(
+                        packageModel.description!,
+                        textDirection: TextDirection.rtl,
                         overflow: TextOverflow.ellipsis,
-                        maxLines: 5,
-                        'تصاميم غير محدودة فيديو غير محدود كتابة محتوى ونشر إدارة يومية حملات ممولة دعم فنى 24 ساعة طوال أيام الأسبوع',
+                        maxLines: 7,
                         style: const TextStyle(
                             fontSize: 14.5,
                             fontWeight: FontWeight.bold),
@@ -131,7 +134,7 @@ class PackageWidget extends StatelessWidget {
                   color:
                   AppColors.primary, //colors[widget.index%colors.length],
 
-                  borderRadius: BorderRadius.only(
+                  borderRadius: const BorderRadius.only(
                     bottomLeft: Radius.circular(15),
                     bottomRight: Radius.circular(15),
                   ),

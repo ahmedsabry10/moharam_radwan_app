@@ -170,6 +170,13 @@ class MyLocale implements Translations{
       "interaction_with_customer":"التفاعل مع العميل",
       "interaction_with_customer_content":"نحن نفهم أهميه التواصل الفعال مع عملائنا . لذا , نسعى دائما رؤيتك وتحويلها الى تصاميم واقعية تعكس هويتك.",
 
+
+      ///dashboard
+      "dashboard":"لوحة التحكم",
+      "control_best_offers":"التحكم في افضل العروض",
+      "control_best_packages":"التحكم في افضل الباقات",
+      "add_new_offer":"اضافه عرض جديد",
+
     },
     "en":{
       "1":"Moharam Radwan",
@@ -341,6 +348,13 @@ class MyLocale implements Translations{
 
       "interaction_with_customer":"Interaction with the customer",
       "interaction_with_customer_content":"We understand the importance of effective communication with our customers. Therefore, we always seek your vision and transform it into realistic designs that reflect your identity.",
+
+
+      ///dashboard
+      "dashboard":"DashBoard",
+      "control_best_offers":"Control the best offers",
+      "control_best_packages":"Control the best packages",
+      "add_new_offer":"AddNewOffer",
 
 
 

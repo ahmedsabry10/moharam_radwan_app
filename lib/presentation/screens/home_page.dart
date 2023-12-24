@@ -2,23 +2,31 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_advanced_drawer/flutter_advanced_drawer.dart';
 import 'package:flutter_social_button/flutter_social_button.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:get/get.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:iconly/iconly.dart';
 import 'package:moharam_radwan/config/theme/app_colors.dart';
 import 'package:moharam_radwan/presentation/screens/drawer_screens/contact_us_screen.dart';
+import 'package:moharam_radwan/presentation/screens/drawer_screens/dashboard_screen.dart';
 import 'package:moharam_radwan/presentation/screens/drawer_screens/our_service.dart';
 import 'package:moharam_radwan/presentation/screens/drawer_screens/who_are_we.dart';
 import 'package:moharam_radwan/presentation/screens/services_screens/mobile_app.dart';
+import 'package:moharam_radwan/presentation/widget/default_line.dart';
 import 'package:moharam_radwan/presentation/widget/item_widget.dart';
 import 'package:moharam_radwan/presentation/widget/opinion_widget.dart';
 import 'package:moharam_radwan/presentation/widget/package_widget.dart';
+import 'package:moharam_radwan/presentation/widget/text_widget.dart';
 import 'package:url_launcher/url_launcher.dart';
+import '../../config/database/database.dart';
 import '../../config/shared/fixed_grid.dart';
 import '../../local/local_controller.dart';
+import '../../local/services_controller.dart';
 import '../../main.dart';
 import '../widget/carousel_item.dart';
 import 'package:video_player/video_player.dart';
+
+import 'drawer_screens/dashboard_screen/packages/admin_package_widget.dart';
 
 class Home extends StatefulWidget {
   Home({super.key});
@@ -49,19 +57,38 @@ class _HomeState extends State<Home> {
   }
 
   List<String> workImage=[
-    "https://moharamradwan.com/wp-content/uploads/2023/12/cIO9ZrINnM2DXDagztJXidTaNfwQDBqn9V9jgH6f1BU_plaintext_638375559552919606-1536x1384.jpg",
-    "https://moharamradwan.com/wp-content/uploads/2023/12/IMG-20231207-WA0033.jpg",
-    "https://moharamradwan.com/wp-content/uploads/2023/12/IMG-20231207-WA0027.jpg",
-    "https://moharamradwan.com/wp-content/uploads/2023/12/IMG-20231207-WA0033.jpg",
-    "https://moharamradwan.com/wp-content/uploads/2023/12/oVGexadedQO03NwgH_xYv7TVnZUpyBHIDoDK6ygkUOo_plaintext_638375559030015018.jpg",
-    "https://moharamradwan.com/wp-content/uploads/2023/12/WhatsApp-Image-2023-12-07-at-15.33.22_8188fccf-1536x1536.jpg",
-    "https://moharamradwan.com/wp-content/uploads/2023/12/0PJjjvGezjhmfZB0-iVzL87yNXbzeJEMS9KIfgeHtpc_plaintext_638375560823924016.jpg",
-    "https://moharamradwan.com/wp-content/uploads/2023/12/CbcVolCtdIDPjQG_gBb1onm22Qh1ItvX5ajICxoE62k_plaintext_638375560417351579-1536x1536.jpg",
-    "https://moharamradwan.com/wp-content/uploads/2023/12/GLoRp42rrOWM_GiqCLRFyzCRullD2EEEt1q-wteu1Jk_plaintext_638375560959036873.jpg",
-    "https://moharamradwan.com/wp-content/uploads/2023/12/ti3wqeL_uCUZbaHiQXtCmu2lvdpFQc0JtUL0hXRAy54_plaintext_638375562140791865-1536x1536.jpg",
-    "https://moharamradwan.com/wp-content/uploads/2023/12/nGQ63cRu0qyzFI-kHHfzobhAzxtB64dw0E_8m1O3m_U_plaintext_638375561260253137-1536x1536.jpg",
+    'https://moharamradwan.com/wp-content/uploads/2023/12/nGQ63cRu0qyzFI-kHHfzobhAzxtB64dw0E_8m1O3m_U_plaintext_638375561260253137-1536x1536.jpg',
+    'https://moharamradwan.com/wp-content/uploads/2023/12/IMG-20231207-WA0022.jpg',
+    'https://moharamradwan.com/wp-content/uploads/2023/12/n6pTAmIrbFFfI2gks5Tok_kwkbBmPnNf3zthysVc4L4_plaintext_638375562287082603-1536x1536.jpg',
+    'https://moharamradwan.com/wp-content/uploads/2023/12/IMG-20231207-WA0031-1536x1536.jpg',
+    'https://moharamradwan.com/wp-content/uploads/2023/12/IMG-20231207-WA0032.jpg',
+    'https://moharamradwan.com/wp-content/uploads/2023/12/IMG-20231207-WA0033.jpg',
+    'https://moharamradwan.com/wp-content/uploads/2023/12/meWdyAp_yqGahkmwHAnZDzoqibxVIdetlf9om5UImbM_plaintext_638375560063222410.jpg',
+    'https://moharamradwan.com/wp-content/uploads/2023/12/IMG-20231207-WA0029.jpg',
+    'https://moharamradwan.com/wp-content/uploads/2023/12/IMG-20231207-WA0029.jpg',
+    'https://moharamradwan.com/wp-content/uploads/2023/12/IMG-20231207-WA0028-1536x1086.jpg',
+    'https://moharamradwan.com/wp-content/uploads/2023/12/IMG-20231207-WA0027.jpg',
+    'https://moharamradwan.com/wp-content/uploads/2023/12/IMG-20231207-WA0026.jpg',
+    'https://moharamradwan.com/wp-content/uploads/2023/12/IMG-20231207-WA0025.jpg',
+    'https://moharamradwan.com/wp-content/uploads/2023/12/IMG-20231207-WA0021-1536x1087.jpg',
+    'https://moharamradwan.com/wp-content/uploads/2023/12/IMG-20231207-WA0023.jpg',
+    'https://moharamradwan.com/wp-content/uploads/2023/12/IMG-20231207-WA0024-1536x1536.jpg',
+    'https://moharamradwan.com/wp-content/uploads/2023/12/IMG-20231207-WA0017.jpg',
+    'https://moharamradwan.com/wp-content/uploads/2023/12/IMG-20231207-WA0018-1536x1536.jpg',
+    'https://moharamradwan.com/wp-content/uploads/2023/12/IMG-20231207-WA0019.jpg',
+    'https://moharamradwan.com/wp-content/uploads/2023/12/IMG-20231207-WA0020.jpg',
+    'https://moharamradwan.com/wp-content/uploads/2023/12/IMG-20231207-WA0034-1536x1536.jpg',
+    'https://moharamradwan.com/wp-content/uploads/2023/12/WhatsApp-Image-2023-12-07-at-15.33.22_8188fccf-1536x1536.jpg',
+    'https://moharamradwan.com/wp-content/uploads/2023/12/0PJjjvGezjhmfZB0-iVzL87yNXbzeJEMS9KIfgeHtpc_plaintext_638375560823924016.jpg',
+    'https://moharamradwan.com/wp-content/uploads/2023/12/CbcVolCtdIDPjQG_gBb1onm22Qh1ItvX5ajICxoE62k_plaintext_638375560417351579-1536x1536.jpg',
+    'https://moharamradwan.com/wp-content/uploads/2023/12/cIO9ZrINnM2DXDagztJXidTaNfwQDBqn9V9jgH6f1BU_plaintext_638375559552919606-1536x1384.jpg',
+    'https://moharamradwan.com/wp-content/uploads/2023/12/GLoRp42rrOWM_GiqCLRFyzCRullD2EEEt1q-wteu1Jk_plaintext_638375560959036873.jpg',
+    'https://moharamradwan.com/wp-content/uploads/2023/12/ti3wqeL_uCUZbaHiQXtCmu2lvdpFQc0JtUL0hXRAy54_plaintext_638375562140791865-1536x1536.jpg',
+    'https://moharamradwan.com/wp-content/uploads/2023/12/oVGexadedQO03NwgH_xYv7TVnZUpyBHIDoDK6ygkUOo_plaintext_638375559030015018.jpg',
   ];
 
+
+  ServicesController servicesController=Get.put(ServicesController());
 
   void _launcherUrl(int value) async {
 
@@ -192,7 +219,31 @@ class _HomeState extends State<Home> {
                       ),
                     ),
                   ),
+                  SizedBox(
+                    height: 20.0,
+                  ),
 
+                  DefaultLine(color: Colors.white),
+                  DefaultLine(color: Colors.white),
+                  SizedBox(
+                    height: 20.0,
+                  ),
+
+                 // HeaderText(text: "dashboard".tr, color: Colors.yellow),
+                  ListTile(
+                    onTap: () {
+                      Get.to(()=>DashBoardScreen());
+                    },
+                    leading: const Icon(
+                      FontAwesomeIcons.dashboard,
+                    ),
+                    title: Text(
+                      'dashboard'.tr,
+                      style: const TextStyle(
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
 
 
 
@@ -290,7 +341,84 @@ class _HomeState extends State<Home> {
                 ///grid
                 Padding(
                   padding: const EdgeInsets.all(10.0),
-                  child: GridView.builder(
+                  child:  StreamBuilder(
+                    ///add id s
+                    stream: MyDatabase.getStreamOffer(),
+                    builder: (context, snapshot) {
+                      if (snapshot.hasError) {
+                        return Center(
+                          child: Text(snapshot.error.toString()),
+                        );
+                      } else if (snapshot.hasData) {
+                        var offers = snapshot.data?.docs
+                            .map((doc) => doc.data())
+                            .toList();
+
+                        return offers!.isEmpty
+                            ? Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: GridView.builder(
+                            shrinkWrap: true,
+                            physics: const NeverScrollableScrollPhysics(),
+                            gridDelegate:
+                            SliverGridDelegateWithFixedCrossAxisCountAndFixedHeight(
+                              mainAxisSpacing: 5.0,
+                              crossAxisSpacing: 10,
+                              height: 70,
+                              //childAspectRatio:  MediaQuery.of(context).size.width / (MediaQuery.of(context).size.height/1),
+                              crossAxisCount: (MediaQuery.of(context).size.width > 1200) ? 8 :(MediaQuery.of(context).size.width > 850) ? 6: 4,
+                            ),
+                            itemBuilder: (_, index) {
+                              return ClipRRect(
+                                borderRadius: const BorderRadius.only(
+                                  topLeft: Radius.circular(15),
+                                  topRight: Radius.circular(15),
+                                  bottomRight: Radius.circular(15),
+                                  bottomLeft: Radius.circular(15),
+                                ),
+                                child:Container(
+                                  color: Colors.grey[200],
+                                ),
+                              );
+
+                            },
+                            itemCount: 8,
+                          ),
+                        )
+                            : GridView.builder(
+                          shrinkWrap: true,
+                          physics: const NeverScrollableScrollPhysics(),
+                          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCountAndFixedHeight(
+                            mainAxisSpacing: 4.0,
+                            crossAxisSpacing: 2,
+                            height: 320,
+                            crossAxisCount: 2,
+                          ),
+                          itemBuilder:  (_, index) {
+                            return offerWidget(
+                              offerModel: offers[index],
+                            );
+                          },
+                          itemCount: offers.length,
+                        );
+                      } else {
+                        return Center(
+                          child: SpinKitDancingSquare(
+                            size: 30,
+                            itemBuilder: (BuildContext context, int index) {
+                              return DecoratedBox(
+                                decoration: BoxDecoration(
+                                  color: AppColors.primary,
+                                ),
+                              );
+                            },
+                          ),
+                        );
+                      }
+                    },
+                  ),
+                  /*
+                  GridView.builder(
                     shrinkWrap: true,
                     physics: const NeverScrollableScrollPhysics(),
                     gridDelegate: const SliverGridDelegateWithFixedCrossAxisCountAndFixedHeight(
@@ -307,6 +435,8 @@ class _HomeState extends State<Home> {
                     },
                     itemCount: 6,
                   ),
+
+                   */
                 ),
                 SizedBox(
                   height: 30.0,
@@ -596,6 +726,67 @@ class _HomeState extends State<Home> {
                         height: 20.0,
                       ),
                       /// package grid
+
+                      StreamBuilder(
+                        ///add id s
+                        stream: MyDatabase.getStreamPackage(),
+                        builder: (context, snapshot) {
+                          if (snapshot.hasError) {
+                            return Center(
+                              child: Text(snapshot.error.toString()),
+                            );
+                          } else if (snapshot.hasData) {
+                            var packages = snapshot.data?.docs
+                                .map((doc) => doc.data())
+                                .toList();
+
+                            return packages!.isEmpty
+                                ? Center(
+                              child: SingleChildScrollView(
+                                child: Column(
+
+                                  children: [
+                                    Icon(
+                                      IconlyBold.paper,
+                                      size: 250,
+                                      color: Colors.black,
+                                    ),
+                                    Text('لا يوجد اي باقات مضافة حاليا ')
+                                  ],
+                                ),
+                              ),
+                            )
+                                : GridView.builder(
+                              shrinkWrap: true,
+                              physics: const NeverScrollableScrollPhysics(),
+                              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCountAndFixedHeight(
+                                mainAxisSpacing: 4.0,
+                                crossAxisSpacing: 2,
+                                height: 270,
+                                crossAxisCount: 2,
+                              ),
+                              itemBuilder:  (_, index) {
+                                return PackageWidget(packageModel: packages[index]) ;
+                              },
+                              itemCount: packages.length,
+                            );
+                          } else {
+                            return Center(
+                              child: SpinKitDancingSquare(
+                                size: 30,
+                                itemBuilder: (BuildContext context, int index) {
+                                  return DecoratedBox(
+                                    decoration: BoxDecoration(
+                                      color: AppColors.primary,
+                                    ),
+                                  );
+                                },
+                              ),
+                            );
+                          }
+                        },
+                      ),
+                      /*
                       GridView.builder(
                         shrinkWrap: true,
                         physics: const NeverScrollableScrollPhysics(),
@@ -610,6 +801,8 @@ class _HomeState extends State<Home> {
                         },
                         itemCount: 4,
                       ),
+
+                       */
 
                       SizedBox(
                         height: 30.0,
@@ -653,7 +846,7 @@ class _HomeState extends State<Home> {
                           viewportFraction: 1.00,
                         ),
                         itemBuilder: (BuildContext context, int index, int realIndex) {
-                        return OpinionsWidget();
+                        return OpinionsWidget(clientName: servicesController.clientNames[index], clientOpinion: servicesController.clientOpinions[index],);
                       }, itemCount: 3,
                       ),
                       SizedBox(

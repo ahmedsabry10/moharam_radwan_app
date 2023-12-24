@@ -3,19 +3,20 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:iconly/iconly.dart';
+import 'package:moharam_radwan/models/offers_model.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../config/theme/app_colors.dart';
 
-class ItemWidget extends StatefulWidget {
-  String imageUrl;
-  ItemWidget({super.key,required this.imageUrl});
+class offerWidget extends StatefulWidget {
+  OfferModel offerModel;
+  offerWidget({super.key,required this.offerModel});
 
   @override
-  State<ItemWidget> createState() => _ItemWidgetState();
+  State<offerWidget> createState() => _offerWidgetState();
 }
 
-class _ItemWidgetState extends State<ItemWidget> {
+class _offerWidgetState extends State<offerWidget> {
 
   void _launcherUrl(int value) async {
 
@@ -63,7 +64,7 @@ class _ItemWidgetState extends State<ItemWidget> {
               ),
 
               child: CachedNetworkImage(
-                imageUrl:widget.imageUrl,
+                imageUrl:widget.offerModel.imageUrl!,
                 fit: BoxFit.fill,
                 height: 170,
                 width: double.infinity,
@@ -90,10 +91,10 @@ class _ItemWidgetState extends State<ItemWidget> {
               children: [
                 Expanded(
                   child: Center(
-                    child: Text(
-                      'Item Name',
+                    child: Text(widget.offerModel.name!,
                       overflow: TextOverflow.ellipsis,
-                      maxLines: 1,
+                      maxLines: 2,
+                      textAlign: TextAlign.center,
                       style: TextStyle(
                           fontSize: 17,
                           color: AppColors.primary,
@@ -115,7 +116,7 @@ class _ItemWidgetState extends State<ItemWidget> {
                   Expanded(
                     child: Center(
                       child: Text(
-                        '1000.0 د.أ',
+                        '${widget.offerModel.price}د.إ ',
                         overflow: TextOverflow.ellipsis,
                         maxLines: 1,
                         style: const TextStyle(
