@@ -222,6 +222,7 @@ class _HomeState extends State<Home> {
                     height: 20.0,
                   ),
 
+                  /*
                   DefaultLine(color: Colors.white),
                   DefaultLine(color: Colors.white),
                   SizedBox(
@@ -243,6 +244,8 @@ class _HomeState extends State<Home> {
                       ),
                     ),
                   ),
+
+                   */
 
 
 

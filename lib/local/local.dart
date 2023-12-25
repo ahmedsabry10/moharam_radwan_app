@@ -263,10 +263,8 @@ class MyLocale implements Translations{
 
 
       ///تحسين محركات البحث
-
       "engine_optimization_title":"We provide advanced SEO services: increase your site's visibility and improve its rankings",
       "engine_optimization_content1":"In today's Internet age, search engine optimization (SEO) is the cornerstone of ensuring that your site is effectively discovered and appears highly in search results. Our specialized SEO services provide a comprehensive solution to enhance your site's visibility and improve its position in search engine rankings.",
-
       "keyword_analysis":"Keyword analysis",
       "keyword_analysis_content":"We conduct a comprehensive analysis of the keywords related to your business to determine the most effective words in improving your site's ranking",
       "linking_security":"Linking security and link building",
@@ -279,7 +277,6 @@ class MyLocale implements Translations{
       /// online store
       "online_store_title":"Start your online store's success journey with customized and effective website design and development services",
       "online_store_content":"Online stores have the power to convert visitors into customers and make the online shopping experience fun and efficient. We provide online store design and development services to ensure you get the most out of your web presence.",
-
       "shopping_experience":"An outstanding shopping experience",
       "shopping_experience_content":"We guarantee to provide an outstanding shopping experience that encourages interaction and increases the conversion rate",
       "content_management_system":"Effective content management system",
@@ -290,7 +287,6 @@ class MyLocale implements Translations{
 
       ///digital marketing
       "digital_marketing_content":"Welcome to Moharam Radwan, a place that embodies excellence in the world of digital marketing. We pride ourselves on providing exceptional marketing services that blend creativity and innovation to achieve our clients' goals.",
-
       "com_digital_marketing":"Comprehensive digital marketing",
       "com_digital_marketing_content":"We provide integrated marketing solutions that cover all aspects of digital presence, from website design and search engine optimization to social media management and online advertising campaigns.",
       "data_analysis":"Data Analysis",
@@ -330,14 +326,11 @@ class MyLocale implements Translations{
       "audio_production_content":"We provide audio production services that include recording sounds, producing podcasts, and creating unique audio experiences to enhance your media presence.",
       "photographic_development":"Photographic development",
       "photographic_development_content":"From product photography to artistic photography, we provide photography services to meet your marketing and documentation needs.",
-
       "excel_thanks":"We excel thanks to you",
       "talented_team":"Talented team",
       "talented_team_content":"Our team works to provide accurate and elaborate designs, inspired by the latest design trends and graphic technology.",
-
       "advanced_technology":"Advanced technology",
       "advanced_technology_content":"The latest technologies are used in production processes to ensure high quality and achieve a distinctive visual and audio effect.",
-
       "interaction_with_customer":"Interaction with the customer",
       "interaction_with_customer_content":"We understand the importance of effective communication with our customers. Therefore, we always seek your vision and transform it into realistic designs that reflect your identity.",
 

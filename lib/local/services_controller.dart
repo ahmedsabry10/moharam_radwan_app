@@ -420,7 +420,7 @@ class ServicesController extends GetxController{
   List <String> clientNames=[
     "كريم محمد",
     "مسعود ماهر",
-    "ايمان خليل",
+    "إيمان خليل",
   ];
 
   List <String> clientOpinions=[
