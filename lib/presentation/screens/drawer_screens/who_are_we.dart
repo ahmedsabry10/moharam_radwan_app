@@ -1,11 +1,9 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:lottie/lottie.dart';
 import 'package:moharam_radwan/config/theme/app_colors.dart';
 import 'package:moharam_radwan/local/services_controller.dart';
 import 'package:moharam_radwan/presentation/widget/text_widget.dart';
-
 import '../../../config/shared/fixed_grid.dart';
 import '../../widget/animated_logo.dart';
 import '../../widget/carousel_item.dart';
@@ -21,7 +19,6 @@ class WhoAreWe extends StatelessWidget {
     'https://moharamradwan.com/wp-content/uploads/2023/12/IMG-20231207-WA0032.jpg',
     'https://moharamradwan.com/wp-content/uploads/2023/12/IMG-20231207-WA0033.jpg',
     'https://moharamradwan.com/wp-content/uploads/2023/12/meWdyAp_yqGahkmwHAnZDzoqibxVIdetlf9om5UImbM_plaintext_638375560063222410.jpg',
-    'https://moharamradwan.com/wp-content/uploads/2023/12/IMG-20231207-WA0029.jpg',
     'https://moharamradwan.com/wp-content/uploads/2023/12/IMG-20231207-WA0029.jpg',
     'https://moharamradwan.com/wp-content/uploads/2023/12/IMG-20231207-WA0028-1536x1086.jpg',
     'https://moharamradwan.com/wp-content/uploads/2023/12/IMG-20231207-WA0027.jpg',
@@ -130,7 +127,7 @@ class WhoAreWe extends StatelessWidget {
               CarouselSlider.builder(
 
                 options: CarouselOptions(
-                  height: 150,
+                  height: 120,
                   autoPlay: true,
                   autoPlayInterval: const Duration(seconds: 3),
                   autoPlayAnimationDuration: const Duration(milliseconds: 500),

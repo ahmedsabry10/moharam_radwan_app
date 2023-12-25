@@ -111,7 +111,7 @@ class PackageWidget extends StatelessWidget {
                         packageModel.description!,
                         textDirection: TextDirection.rtl,
                         overflow: TextOverflow.ellipsis,
-                        maxLines: 7,
+                        maxLines: 8,
                         style: const TextStyle(
                             fontSize: 14.5,
                             fontWeight: FontWeight.bold),

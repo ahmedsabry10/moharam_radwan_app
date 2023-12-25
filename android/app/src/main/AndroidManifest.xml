@@ -3,7 +3,7 @@
 
 
     <application
-        android:label="moharam_radwan"
+        android:label="Moharam Radwan"
         android:name="${applicationName}"
         android:icon="@mipmap/launcher_icon">
         <activity

@@ -156,6 +156,7 @@ class _AddNewPackagesState extends State<AddNewPackages> {
                                 color: AppColors.primary,
                               )),
                           child: TextFormField(
+                            maxLines: 8,
                             validator: (text) {
                               if (text == null || text.trim().isEmpty) {
                                 return 'please enter description ';
@@ -170,6 +171,7 @@ class _AddNewPackagesState extends State<AddNewPackages> {
                               contentPadding:
                               EdgeInsets.symmetric(vertical: 20),
                               border: InputBorder.none,
+
                               hintText: 'Package description',
                               hintStyle: TextStyle(
                                 color: AppColors.primary,
@@ -184,7 +186,7 @@ class _AddNewPackagesState extends State<AddNewPackages> {
                                 ),
                               ),
                             ),
-                            keyboardType: TextInputType.number,
+                            keyboardType: TextInputType.name,
                           ),
                         ),
                         const SizedBox(

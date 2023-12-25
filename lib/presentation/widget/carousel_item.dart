@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:moharam_radwan/config/theme/app_colors.dart';
 
 class OurWorkItem extends StatefulWidget {
   String imageUrl;
@@ -33,11 +34,11 @@ class _OurWorkItemState extends State<OurWorkItem> {
             fit: BoxFit.fill,
             height: 120,
             width: 120,
-            placeholder: (context, url) => const Center(
+            placeholder: (context, url) =>  Center(
               child: Text(
                 'Loading ...',
                 style: TextStyle(
-                    color: Colors.green, fontSize: 15.0),
+                    color: AppColors.primary, fontSize: 15.0),
               ),
             ),
             errorWidget: (context, url, error) =>

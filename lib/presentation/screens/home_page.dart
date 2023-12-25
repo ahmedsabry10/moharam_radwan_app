@@ -65,7 +65,6 @@ class _HomeState extends State<Home> {
     'https://moharamradwan.com/wp-content/uploads/2023/12/IMG-20231207-WA0033.jpg',
     'https://moharamradwan.com/wp-content/uploads/2023/12/meWdyAp_yqGahkmwHAnZDzoqibxVIdetlf9om5UImbM_plaintext_638375560063222410.jpg',
     'https://moharamradwan.com/wp-content/uploads/2023/12/IMG-20231207-WA0029.jpg',
-    'https://moharamradwan.com/wp-content/uploads/2023/12/IMG-20231207-WA0029.jpg',
     'https://moharamradwan.com/wp-content/uploads/2023/12/IMG-20231207-WA0028-1536x1086.jpg',
     'https://moharamradwan.com/wp-content/uploads/2023/12/IMG-20231207-WA0027.jpg',
     'https://moharamradwan.com/wp-content/uploads/2023/12/IMG-20231207-WA0026.jpg',
@@ -475,7 +474,7 @@ class _HomeState extends State<Home> {
                 CarouselSlider.builder(
 
                   options: CarouselOptions(
-                    height: 155,
+                    height: 120,
                     autoPlay: true,
                     autoPlayInterval: const Duration(seconds: 3),
                     autoPlayAnimationDuration: const Duration(milliseconds: 500),
@@ -487,7 +486,7 @@ class _HomeState extends State<Home> {
                   return OurWorkItem(
                     imageUrl: workImage[index],
                   );
-                }, itemCount: 3,
+                }, itemCount: workImage.length,
                 ),
                 SizedBox(
                   height: 30.0,
@@ -762,7 +761,7 @@ class _HomeState extends State<Home> {
                               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCountAndFixedHeight(
                                 mainAxisSpacing: 4.0,
                                 crossAxisSpacing: 2,
-                                height: 270,
+                                height: 288,
                                 crossAxisCount: 2,
                               ),
                               itemBuilder:  (_, index) {
@@ -786,23 +785,6 @@ class _HomeState extends State<Home> {
                           }
                         },
                       ),
-                      /*
-                      GridView.builder(
-                        shrinkWrap: true,
-                        physics: const NeverScrollableScrollPhysics(),
-                        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCountAndFixedHeight(
-                          mainAxisSpacing: 4.0,
-                          crossAxisSpacing: 2,
-                          height: 250,
-                          crossAxisCount: 2,
-                        ),
-                        itemBuilder:  (_, index) {
-                          return PackageWidget();
-                        },
-                        itemCount: 4,
-                      ),
-
-                       */
 
                       SizedBox(
                         height: 30.0,
@@ -960,64 +942,6 @@ class _HomeState extends State<Home> {
       ),
     );
 
-
-
-
-    /*
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          "1".tr
-        ),
-      ),
-      body: Center(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            MaterialButton(
-                onPressed: (){
-                  controllerLang.changeLang("ar");
-                },
-                child: Container(
-                  color: Colors.red,
-                  width: double.infinity,
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Center(
-                      child: Text(
-                          '2'.tr
-                      ),
-                    ),
-                  ),
-                )),
-
-            SizedBox(
-              height: 10.0,
-            ),
-            MaterialButton(
-                onPressed: (){
-                  controllerLang.changeLang("en");
-                },
-                child: Container(
-                  color: Colors.red,
-                  width: double.infinity,
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Center(
-                      child: Text(
-                          '3'.tr
-                      ),
-                    ),
-                  ),
-                )),
-
-          ],
-        ),
-      )
-    );
-
-     */
 
 
   }
