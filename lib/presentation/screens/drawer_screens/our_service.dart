@@ -29,7 +29,7 @@ class OurServices extends StatelessWidget {
   ];
 
   OurServices({super.key});
-  ServicesController servicesController=Get.put(ServicesController());
+  ServicesController servicesController=Get.find();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
