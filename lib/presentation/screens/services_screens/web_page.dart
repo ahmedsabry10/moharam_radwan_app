@@ -8,6 +8,7 @@ import 'package:moharam_radwan/presentation/widget/services_widget/question_widg
 import 'package:moharam_radwan/presentation/widget/text_widget.dart';
 
 import '../../../config/shared/fixed_grid.dart';
+import '../../../main.dart';
 import '../../widget/animated_logo.dart';
 import '../../widget/carousel_item.dart';
 import '../../widget/opinion_widget.dart';
@@ -79,9 +80,8 @@ class WebPage extends StatelessWidget {
                     itemBuilder: (BuildContext context, int index, int realIndex) {
                       return DistinguishesWidget(
                         imageUrl: servicesController.distinguishesIcons[index],
-                        title: servicesController.webDistinguishesTitle[index],
-                        content: servicesController.webDistinguishesContent[index],
-                      );
+                        title:getTranslatedString( servicesController.webDistinguishesTitle[index],),
+                        content:getTranslatedString(servicesController.webDistinguishesContent[index] ));
                     }, itemCount: servicesController.distinguishesIcons.length,
                   ),
 
@@ -120,8 +120,8 @@ class WebPage extends StatelessWidget {
                     itemBuilder:  (_, index) {
                       return DistinguishesWidget(
                         imageUrl: servicesController.maintenanceIcons[index],
-                        title: servicesController.webMaintenanceTitle[index],
-                        content: servicesController.webMaintenanceContent[index],
+                        title:getTranslatedString(servicesController.webMaintenanceTitle[index]),
+                        content:getTranslatedString(servicesController.webMaintenanceContent[index]),
                       );
                     },
                     itemCount: servicesController.webMaintenanceContent.length,

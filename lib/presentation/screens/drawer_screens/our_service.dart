@@ -1,35 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:lottie/lottie.dart';
 import 'package:moharam_radwan/local/services_controller.dart';
 import 'package:moharam_radwan/presentation/widget/animated_logo.dart';
 import 'package:moharam_radwan/presentation/widget/services_item.dart';
-
 import '../../../config/shared/fixed_grid.dart';
-import '../services_screens/digital_marketing.dart';
-import '../services_screens/engine_optmization.dart';
-import '../services_screens/graphic_design.dart';
-import '../services_screens/media_production.dart';
-import '../services_screens/mobile_app.dart';
-import '../services_screens/online_store.dart';
-import '../services_screens/web_page.dart';
-
-class OurServices extends StatelessWidget {
 
 
-  List<Widget> screens=[
-    MobileApplication(),
-    WebPage(),
-    EngineOptimization(),
-    OnlineStorePage(),
-    DigitalMarketing(),
-    GraphicDesign(),
-    MediaProduction(),
+class OurServices extends StatefulWidget {
 
-  ];
+
 
   OurServices({super.key});
-  ServicesController servicesController=Get.find();
+
+  @override
+  State<OurServices> createState() => _OurServicesState();
+}
+
+class _OurServicesState extends State<OurServices> {
+
+  ServicesController servicesController=Get.put(ServicesController());
+
+  String getTranslatedString(String key) {
+    return key.tr;
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -57,7 +50,7 @@ class OurServices extends StatelessWidget {
                 itemBuilder: (_, index) {
                   return buildServicesItem(context,
                     index: index,
-                    title: servicesController.names[index],
+                    title:getTranslatedString( servicesController.names[index]),
                     icons: servicesController.icons[index],
                     screens: servicesController.screensServices[index],
                   );

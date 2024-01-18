@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
 import 'package:moharam_radwan/config/theme/app_colors.dart';
 import 'package:moharam_radwan/local/services_controller.dart';
+import 'package:moharam_radwan/main.dart';
 import 'package:moharam_radwan/presentation/widget/services_widget/question_widgets.dart';
 import 'package:moharam_radwan/presentation/widget/text_widget.dart';
 
@@ -106,7 +107,7 @@ class MobileApplication extends StatelessWidget {
               CarouselSlider.builder(
 
                 options: CarouselOptions(
-                  height: 230,
+                  height: 250,
                   enlargeCenterPage: false,
                   autoPlay: true,
                   aspectRatio: 15 / 14,
@@ -119,8 +120,8 @@ class MobileApplication extends StatelessWidget {
                 itemBuilder: (BuildContext context, int index, int realIndex) {
                   return DistinguishesWidget(
                     imageUrl: servicesController.distinguishesIcons[index],
-                    title: servicesController.distinguishesTitle[index],
-                    content: servicesController.distinguishesContent[index],
+                    title: getTranslatedString(servicesController.distinguishesTitle[index]),
+                    content:getTranslatedString(servicesController.distinguishesContent[index]) ,
                   );
                 }, itemCount: servicesController.distinguishesIcons.length,
               ),
@@ -160,8 +161,8 @@ class MobileApplication extends StatelessWidget {
                 itemBuilder:  (_, index) {
                   return DistinguishesWidget(
                     imageUrl: servicesController.maintenanceIcons[index],
-                    title: servicesController.maintenanceTitle[index],
-                    content: servicesController.maintenanceContent[index],
+                    title:getTranslatedString(servicesController.maintenanceTitle[index]) ,
+                    content:getTranslatedString(servicesController.maintenanceContent[index]),
                   );
                 },
                 itemCount: servicesController.maintenanceContent.length,
@@ -232,7 +233,7 @@ class MobileApplication extends StatelessWidget {
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCountAndFixedHeight(
                   mainAxisSpacing: 4.0,
                   crossAxisSpacing: 2,
-                  height: 210,
+                  height: 240,
                   crossAxisCount: 1,
                 ),
                 itemBuilder:  (_, index) {

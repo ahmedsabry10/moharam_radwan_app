@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'package:moharam_radwan/local/services_controller.dart';
+import 'package:moharam_radwan/main.dart';
 import 'package:moharam_radwan/presentation/widget/services_widget/question_widgets.dart';
 import 'package:moharam_radwan/presentation/widget/text_widget.dart';
 
@@ -75,8 +76,8 @@ class MediaProduction extends StatelessWidget {
                 itemBuilder: (BuildContext context, int index, int realIndex) {
                   return DistinguishesWidget(
                     imageUrl: servicesController.distinguishesIcons[index],
-                    title: servicesController.mediaDistinguishesTitle[index],
-                    content: servicesController.mediaDistinguishesContent[index],
+                    title:getTranslatedString( servicesController.mediaDistinguishesTitle[index]),
+                    content:getTranslatedString(servicesController.mediaDistinguishesContent[index]) ,
                   );
                 }, itemCount: servicesController.mediaDistinguishesContent.length,
               ),
@@ -105,8 +106,8 @@ class MediaProduction extends StatelessWidget {
                 itemBuilder:  (_, index) {
                   return DistinguishesWidget(
                     imageUrl: servicesController.mediaMaintenanceIcons[index],
-                    title: servicesController.mediaMaintenanceTitle[index],
-                    content: servicesController.mediaMaintenanceContent[index],
+                    title: getTranslatedString(servicesController.mediaMaintenanceTitle[index]),
+                    content: getTranslatedString(servicesController.mediaMaintenanceContent[index]),
                   );
                 },
                 itemCount: servicesController.mediaMaintenanceContent.length,

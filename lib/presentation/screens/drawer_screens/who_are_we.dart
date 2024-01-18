@@ -5,6 +5,7 @@ import 'package:moharam_radwan/config/theme/app_colors.dart';
 import 'package:moharam_radwan/local/services_controller.dart';
 import 'package:moharam_radwan/presentation/widget/text_widget.dart';
 import '../../../config/shared/fixed_grid.dart';
+import '../../../main.dart';
 import '../../widget/animated_logo.dart';
 import '../../widget/carousel_item.dart';
 
@@ -42,6 +43,9 @@ class WhoAreWe extends StatelessWidget {
   ];
 
   ServicesController servicesController=Get.put(ServicesController());
+  String getTranslatedString(String key) {
+    return key.tr;
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -96,7 +100,7 @@ class WhoAreWe extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          CenterHeaderText(text: servicesController.numTitle[index]),
+                          CenterHeaderText(text: getTranslatedString(servicesController.numTitle[index])),
                           ContentText(text: servicesController.numContent[index]),
                         ],
                       ),
@@ -139,13 +143,8 @@ class WhoAreWe extends StatelessWidget {
                   return OurWorkItem(
                     imageUrl: workImage[index] ,
                   );
-                }, itemCount: workImage.length,
+                } , itemCount: workImage.length,
               ),
-
-
-
-
-
 
             ],
           ),

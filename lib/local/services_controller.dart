@@ -1,28 +1,17 @@
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:moharam_radwan/presentation/screens/services_screens/engine_optmization.dart';
-import 'package:moharam_radwan/presentation/screens/services_screens/mobile_app.dart';
-import 'package:moharam_radwan/presentation/screens/services_screens/online_store.dart';
-import 'package:moharam_radwan/presentation/screens/services_screens/web_page.dart';
-
-import '../presentation/screens/services_screens/digital_marketing.dart';
-import '../presentation/screens/services_screens/graphic_design.dart';
-import '../presentation/screens/services_screens/media_production.dart';
-
 class ServicesController extends GetxController{
   List <String> names=[
-    "services1".tr,
-    "services2".tr,
-    "services3".tr,
-    "services4".tr,
-    "services5".tr,
+    "services1",
+    "services2",
+    "services3",
+    "services4",
+    "services5",
     /*
     "services6".tr,
     "services7".tr,
-
      */
-    "services8".tr,
-    "services9".tr,
+    "services8",
+    "services9",
   ];
   List <String> icons=[
     "assets/services_icons/phone.png",
@@ -33,14 +22,10 @@ class ServicesController extends GetxController{
     /*
     "assets/services_icons/software_development.png",
     "assets/services_icons/advertising_campaigns.png",
-
      */
     "assets/services_icons/graphic_design.png",
     "assets/services_icons/production.png",
   ];
-
-
-
   List<String> screensServices=[
     "/mobile_app",
     "/web_page",
@@ -65,15 +50,15 @@ class ServicesController extends GetxController{
     "assets/services_icons/tools.png",
   ];
   List <String> distinguishesTitle=[
-    "distinguishes_title1".tr,
-    "distinguishes_title2".tr,
-    "distinguishes_title3".tr,
+    "distinguishes_title1",
+    "distinguishes_title2",
+    "distinguishes_title3",
   ];
 
   List <String> distinguishesContent=[
-    "distinguishes_content1".tr,
-    "distinguishes_content2".tr,
-    "distinguishes_content3".tr,
+    "distinguishes_content1",
+    "distinguishes_content2",
+    "distinguishes_content3",
   ];
 
 
@@ -82,13 +67,13 @@ class ServicesController extends GetxController{
     "assets/services_icons/tools.png",
   ];
   List <String> maintenanceTitle=[
-    "maintenance_title1".tr,
-    "maintenance_title2".tr,
+    "maintenance_title1",
+    "maintenance_title2",
   ];
 
   List <String> maintenanceContent=[
-    "maintenance_content1".tr,
-    "maintenance_content2".tr,
+    "maintenance_content1",
+    "maintenance_content2",
   ];
 
 
@@ -133,26 +118,26 @@ class ServicesController extends GetxController{
 
 
   List <String> webDistinguishesTitle=[
-    "ux".tr,
-    "dynamic_website".tr,
-    "maintenance_title1".tr,
+    "ux",
+    "dynamic_website",
+    "maintenance_title1",
   ];
 
   List <String> webDistinguishesContent=[
-    "web_distinguishes_content1".tr,
-    "web_distinguishes_content2".tr,
-    "web_distinguishes_content3".tr,
+    "web_distinguishes_content1",
+    "web_distinguishes_content2",
+    "web_distinguishes_content3",
   ];
 
 
   List <String> webMaintenanceTitle=[
-    "database_integration".tr,
-    "improve_site_performance".tr,
+    "database_integration",
+    "improve_site_performance",
   ];
 
   List <String> webMaintenanceContent=[
-    "database_integration_c1".tr,
-    "improve_site_performance_c1".tr,
+    "database_integration_c1",
+    "improve_site_performance_c1",
   ];
 
 
@@ -177,15 +162,15 @@ class ServicesController extends GetxController{
 
 
   List <String> engOptDistinguishesTitle=[
-    "keyword_analysis".tr,
-    "linking_security".tr,
-    "content_review".tr,
+    "keyword_analysis",
+    "linking_security",
+    "content_review",
   ];
 
   List <String> engOptDistinguishesContent=[
-    "keyword_analysis_content".tr,
-    "linking_security_content".tr,
-    "content_review_content".tr,
+    "keyword_analysis_content",
+    "linking_security_content",
+    "content_review_content",
   ];
 
   List <String> numOptTitle=[
@@ -218,15 +203,15 @@ class ServicesController extends GetxController{
 
 
   List <String> onlineStoreDistinguishesTitle=[
-    "shopping_experience".tr,
-    "content_management_system".tr,
-    "improve_transaction_security".tr,
+    "shopping_experience",
+    "content_management_system",
+    "improve_transaction_security",
   ];
 
   List <String> onlineStoreDistinguishesContent=[
-    "shopping_experience_content".tr,
-    "content_management_system_content".tr,
-    "improve_transaction_security_content".tr,
+    "shopping_experience_content",
+    "content_management_system_content",
+    "improve_transaction_security_content",
   ];
 
 
@@ -259,26 +244,26 @@ class ServicesController extends GetxController{
 
 
   List <String> digitalDistinguishesTitle=[
-    "com_digital_marketing".tr,
-    "data_analysis".tr,
-    "unique_strategy".tr,
+    "com_digital_marketing",
+    "data_analysis",
+    "unique_strategy",
   ];
 
   List <String> digitalDistinguishesContent=[
-    "com_digital_marketing_content".tr,
-    "data_analysis_content".tr,
-    "unique_strategy_content".tr,
+    "com_digital_marketing_content",
+    "data_analysis_content",
+    "unique_strategy_content",
   ];
 
 
   List <String> digitalMaintenanceTitle=[
-    "advanced_technology".tr,
-    "dedicated_team".tr,
+    "advanced_technology",
+    "dedicated_team",
   ];
 
   List <String> digitalMaintenanceContent=[
-    "advanced_technology_content".tr,
-    "dedicated_team_content".tr,
+    "advanced_technology_content",
+    "dedicated_team_content",
   ];
 
   List <String> digitalNumTitle=[
@@ -319,23 +304,23 @@ class ServicesController extends GetxController{
     "assets/services_icons/tools.png",
   ];
   List <String> graphicDistinguishesTitle=[
-    "visual_identity_design".tr,
-    "Website_application_design".tr,
-    "marketing_materials_design".tr,
-    "unique_creativity".tr,
-    "elaborate_design".tr,
-    "interaction_with_the_customer".tr,
+    "visual_identity_design",
+    "Website_application_design",
+    "marketing_materials_design",
+    "unique_creativity",
+    "elaborate_design",
+    "interaction_with_the_customer",
 
 
   ];
 
   List <String> graphicDistinguishesContent=[
-    "visual_identity_design_content".tr,
-    "Website_application_design_content".tr,
-    "marketing_materials_design_content".tr,
-    "unique_creativity_content".tr,
-    "elaborate_design_content".tr,
-    "interaction_with_the_customer_content".tr,
+    "visual_identity_design_content",
+    "Website_application_design_content",
+    "marketing_materials_design_content",
+    "unique_creativity_content",
+    "elaborate_design_content",
+    "interaction_with_the_customer_content",
   ];
 
 
@@ -370,15 +355,15 @@ class ServicesController extends GetxController{
 
 
   List <String> mediaDistinguishesTitle=[
-    "video_production".tr,
-    "audio_production".tr,
-    "photographic_development".tr,
+    "video_production",
+    "audio_production",
+    "photographic_development",
   ];
 
   List <String> mediaDistinguishesContent=[
-    "video_production_content".tr,
-    "audio_production_content".tr,
-    "photographic_development_content".tr,
+    "video_production_content",
+    "audio_production_content",
+    "photographic_development_content",
   ];
 
 
@@ -389,15 +374,15 @@ class ServicesController extends GetxController{
     "assets/services_icons/tools.png",
   ];
   List <String> mediaMaintenanceTitle=[
-    "talented_team".tr,
-    "advanced_technology".tr,
-    "interaction_with_customer".tr
+    "talented_team",
+    "advanced_technology",
+    "interaction_with_customer",
   ];
 
   List <String> mediaMaintenanceContent=[
-    "talented_team_content".tr,
-    "advanced_technology_content".tr,
-    "interaction_with_customer_content".tr
+    "talented_team_content",
+    "advanced_technology_content",
+    "interaction_with_customer_content",
   ];
 
 
@@ -422,7 +407,6 @@ class ServicesController extends GetxController{
     "مسعود ماهر",
     "إيمان خليل",
   ];
-
   List <String> clientOpinions=[
     'تعاون رائع وتفاعل سريع . لقد أحببنا تحسينات التصميم التي قدمها محرم رضوان',
     "فريق محترف ومتفانِِ في تقديم الخدمات التقنية , لا يمكننا سوي التأكيد على جودة العمل ",

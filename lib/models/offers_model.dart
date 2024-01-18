@@ -6,7 +6,6 @@ class OfferModel{
   static const String collectionName='offers';
   String? id;
   String? name;
-
   String? price;
   String? imageUrl;
   DateTime? dateTime;

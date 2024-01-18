@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
 import 'package:moharam_radwan/config/theme/app_colors.dart';
 import 'package:moharam_radwan/local/services_controller.dart';
+import 'package:moharam_radwan/main.dart';
 import 'package:moharam_radwan/presentation/widget/services_widget/question_widgets.dart';
 import 'package:moharam_radwan/presentation/widget/text_widget.dart';
 
@@ -78,8 +79,8 @@ class OnlineStorePage extends StatelessWidget {
                     itemBuilder: (BuildContext context, int index, int realIndex) {
                       return DistinguishesWidget(
                         imageUrl: servicesController.distinguishesIcons[index],
-                        title: servicesController.onlineStoreDistinguishesTitle[index],
-                        content: servicesController.onlineStoreDistinguishesContent[index],
+                        title: getTranslatedString(servicesController.onlineStoreDistinguishesTitle[index]),
+                        content:getTranslatedString(servicesController.onlineStoreDistinguishesContent[index]),
                       );
                     }, itemCount: servicesController.onlineStoreDistinguishesTitle.length,
                   ),

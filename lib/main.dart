@@ -23,10 +23,15 @@ import 'config/theme/app_theme.dart';
 import 'firebase_options.dart';
 import 'local/local.dart';
 import 'local/local_controller.dart';
+import 'local/services_controller.dart';
 
 
 
 SharedPreferences? sharedPref;
+
+String getTranslatedString(String key) {
+  return key.tr;
+}
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
@@ -43,6 +48,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     MyLocaleController controller= Get.put(MyLocaleController());
+
     return GetMaterialApp(
       title: "1".tr,
       translations: MyLocale(),
@@ -67,11 +73,6 @@ class MyApp extends StatelessWidget {
         GetPage(name: "/add_new_best_offer", page: ()=>AddNewOffer()),
         GetPage(name: "/manage_best_packages", page: ()=>ManagePackages()),
         GetPage(name: "/add_new_packages", page: ()=>AddNewPackages()),
-
-
-
-
-
 
       ],
       debugShowCheckedModeBanner: false,

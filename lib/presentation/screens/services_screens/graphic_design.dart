@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'package:moharam_radwan/local/services_controller.dart';
+import 'package:moharam_radwan/main.dart';
 import 'package:moharam_radwan/presentation/widget/services_widget/question_widgets.dart';
 import 'package:moharam_radwan/presentation/widget/text_widget.dart';
 
@@ -87,8 +88,8 @@ class GraphicDesign extends StatelessWidget {
                 itemBuilder: (BuildContext context, int index, int realIndex) {
                   return DistinguishesWidget(
                     imageUrl: servicesController.graphicDistinguishesIcons[index],
-                    title: servicesController.graphicDistinguishesTitle[index],
-                    content: servicesController.graphicDistinguishesContent[index],
+                    title:getTranslatedString(servicesController.graphicDistinguishesTitle[index]),
+                    content:getTranslatedString(servicesController.graphicDistinguishesContent[index]),
                   );
                 }, itemCount: servicesController.graphicDistinguishesContent.length,
               ),
@@ -151,8 +152,8 @@ class GraphicDesign extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          CenterHeaderText(text: servicesController.graphicNumTitle[index]),
-                          ContentText(text: servicesController.graphicNumContent[index]),
+                          CenterHeaderText(text:getTranslatedString( servicesController.graphicNumTitle[index])),
+                          ContentText(text:getTranslatedString(servicesController.graphicNumContent[index])),
                         ],
                       ),
                     ),

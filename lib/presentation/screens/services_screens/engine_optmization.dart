@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
 import 'package:moharam_radwan/config/theme/app_colors.dart';
 import 'package:moharam_radwan/local/services_controller.dart';
+import 'package:moharam_radwan/main.dart';
 import 'package:moharam_radwan/presentation/widget/services_widget/question_widgets.dart';
 import 'package:moharam_radwan/presentation/widget/text_widget.dart';
 
@@ -78,8 +79,8 @@ class EngineOptimization extends StatelessWidget {
                     itemBuilder: (BuildContext context, int index, int realIndex) {
                       return DistinguishesWidget(
                         imageUrl: servicesController.distinguishesIcons[index],
-                        title: servicesController.engOptDistinguishesTitle[index],
-                        content: servicesController.engOptDistinguishesContent[index],
+                        title: getTranslatedString(servicesController.engOptDistinguishesTitle[index]),
+                        content: getTranslatedString(servicesController.engOptDistinguishesContent[index]),
                       );
                     }, itemCount: servicesController.engOptDistinguishesTitle.length,
                   ),
